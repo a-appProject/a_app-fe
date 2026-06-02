@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  min-height: 100vh;
+  background-size: 100% auto;
+  overflow: hidden;
+}
+
+:root {
+  --border-radius: 14px;
+  --border-radius-desktop: 17px;
+  --orange-color: #F8A917;
+  --green-color: #31B545;
+  --red-color: #E64D44;
+  --grey-color: #EFEFF3;
+  --blue-color: #007AFF;
+  --margin-top: 30px;
+  --drop-shadow-2: 2px 4px 12px 0 #00000014;
+  --drop-shadow-item: 0 0 4px 0 #D9D9D9;
+  --transform-scale-active: scale(0.97);
+  --transform-scale-not-active: scale(1);
+}
+
+html {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+#app {
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 100vh;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  padding-top: var(--tg-safe-area-inset-top);
+  max-width: 430px;
+  background-color: white
+}
+
+#app::-webkit-scrollbar {
+  display: none;
+}
+
+.fade-move,
+.fade-leave-active, 
+.fade-enter-active {
+  transition: all .4s ease-in-out;
+}
+
+.fade-leave-from, 
+.fade-enter-to {
+  opacity: 1;
+}
+
+.fade-leave-to,
+.fade-enter-from {
+  opacity: 0;
+}
