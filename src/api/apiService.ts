@@ -23,7 +23,6 @@ export class ApiService {
   static withAuth(): HeadersInit {
     const token = this.getToken();
 
-    
     if (!token) {
       return {};
     }
