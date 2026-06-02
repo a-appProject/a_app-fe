@@ -1,7 +1,8 @@
 import store from "@/store";
 
 export class ApiService {
-  public static url =  import.meta.env.VITE_API_URL;
+  // public static url =  import.meta.env.VITE_API_URL;
+  public static url =  '77.232.139.243';
   public static baseUrl = `${ApiService.url}/api`;
 
   static getToken(): string | undefined {
