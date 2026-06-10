@@ -31,7 +31,6 @@ function editOrder(){
   isEdit.value = !isEdit.value;
 }
 
-
 function backButtonPressed() {
   if (openIfoScaner.value === true) {
     closePopInfo();
