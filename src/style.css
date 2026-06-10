@@ -42,15 +42,15 @@ html {
   overflow-y: auto;
   overflow-x: hidden;
   width: 100%;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 3%;
+  padding-right: 3%;
   height: 100vh;
   display: flex;
   text-align: center;
   flex-direction: column;
   padding-top: var(--tg-safe-area-inset-top);
   max-width: 430px;
-  background-color: white
+  background-color: #EFEFF3
 }
 
 #app::-webkit-scrollbar {

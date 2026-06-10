@@ -46,7 +46,7 @@ async function selectPoint(point: Point | undefined) {
 
 //Управление стилями кнопок
 function buttonStyle(point: string) {
-  return selectedPoint.value?.uuid === point ? 'background-color: var(--green-color); color: white' : 'color: var(--blue-color)';
+  return selectedPoint.value?.uuid === point ? 'background-color: var(--blue-color); color: white' : 'color: var(--blue-color)';
 }
 
 
@@ -101,12 +101,8 @@ function choosePoint() {
 
     <Transition name="fade">
       <div class="btn-choose-point" v-if="store.getters.USER.role !== 'zagotovshik'">
-        <div class="buttonnn" @click="choosePoint()">
-          <p >ВЫБРАТЬ ТОЧКУ</p>
-          <img class="arrow" :style="styleArrow" src="@/assets/arrow.svg">
-        </div>
         <Transition name="fade">
-          <div class="three-btns" v-if="renderBtnsPoints">
+          <div class="three-btns">
             <button
               type="button"
               v-for="point in points"
@@ -214,16 +210,6 @@ function choosePoint() {
 
 .btn-choose-point {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  font-weight: 500;
-  box-shadow: var(--drop-shadow-2);
-  border-radius: var(--border-radius);
-  padding: 17px 0 17px 0;
-  gap: 15px;
 }
 
 .label-orders-wrapper{ 
@@ -345,33 +331,26 @@ function choosePoint() {
   padding: 0;
   background: none;
   font-family: inherit;
-  background-color: var(--grey-color);
   font-size: 18px;
   font-weight: 600;
-  border-radius: var(--border-radius);
-  box-shadow: var(--drop-shadow-2);
   width: 100%;
-  padding: 17px;
+  padding: 17px 30px;
   align-items: center;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   transition: all .3s ease;
 }
 
 .three-btns{
-  /* display: grid;
-  width: 100%;
-  margin-top: 10px;
-  grid-template-columns: repeat(3, 1fr);
-  row-gap: 20px;
-  column-gap: 20px; */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: center;
-  gap: 20px;
-  margin-top: 10px;
-  width: 90%;
+  gap: 5px;
+  width: 100%;
+  background-color: white;
+  border-radius: 30px;
+  overflow: hidden;
 }
 
 .home-wrapper {

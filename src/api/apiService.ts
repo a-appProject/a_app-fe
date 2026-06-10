@@ -1,9 +1,8 @@
 import store from "@/store";
 
 export class ApiService {
-  // public static url =  import.meta.env.VITE_API_URL;
-  public static url = '';
-  public static baseUrl = `/api`;
+  public static url =  import.meta.env.VITE_API_URL;
+  public static baseUrl = `${ApiService.url}/api`;
 
   static getToken(): string | undefined {
     const launchParams = store.getters.TELEGRAM_RETRIENE_LAUNCH_PARAMS;
